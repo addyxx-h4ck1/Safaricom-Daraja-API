@@ -1,0 +1,24 @@
+{
+  "name": "safaricom-api",
+  "version": "1.0.0",
+  "description": "safaricom API Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Brian Njoroge",
+  "license": "MIT",
+  "dependencies": {
+    "@ngrok/ngrok": "^1.3.0",
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.4"
+  }
+}
