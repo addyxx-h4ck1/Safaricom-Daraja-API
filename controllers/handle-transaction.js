@@ -14,4 +14,9 @@ const handleTransaction = async (req, res) => {
   }
 }
 
-module.exports = { handleTransaction }
+const handleCallback = async (req, res) => {
+  console.log(req.body)
+  res.sendStatus(201)
+}
+
+module.exports = { handleTransaction, handleCallback }

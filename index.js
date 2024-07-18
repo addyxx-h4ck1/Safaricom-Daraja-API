@@ -4,16 +4,19 @@ const cors = require('cors')
 const ngrok = require('@ngrok/ngrok')
 const app = express()
 const payment = require('./routes/transaction-route')
+const callback = require('./routes/callback')
 
 //middleware
 app.use(cors())
+app.use(express.json())
 
 //routes
 app.use('/pay', payment)
+app.use('/callback', callback)
 
 //test route
 app.get('/', (req, res) => {
-  res.status(200).send('<h1>service is on</h1>')
+  res.status(200).json({ ok: true })
 })
 
 app.listen(process.env.PORT || 3000, () =>
